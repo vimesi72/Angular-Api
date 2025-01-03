@@ -15,13 +15,12 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.llenarData();
-  }
-
-  llenarData() {
+    //this.llenarData();
     this.apiService.getdata().subscribe((data) => {
       this.data = data;
       console.log(this.data);
     });
   }
+
+  //llenarData() {}
 }
